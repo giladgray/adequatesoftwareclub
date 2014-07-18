@@ -1,12 +1,36 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700)
+
 body
   max-width: 960px
   margin: auto
   text-align: center
 
-  font-family: sans-serif
+  font-family: 'Roboto Slab', Georgia, serif
+  margin: 2em auto
 
-pre
-  text-align: left
-  background: #eee
+header
+  $border-color: gray
 
+  display: inline-block
 
+  text-align: center
+  font-size: 3em
+  line-height: 1
+
+  .the, .club
+    font-size: 1em
+    font-style: italic
+
+  .adequate, .software
+    font-size: 2em
+    text-transform: uppercase
+
+  .adequate
+    margin-top: 0.1em
+    padding-top: 0.05em
+    border-top: 2px solid $border-color
+
+  .software
+    margin-bottom: 0.1em
+    padding-bottom: 0.1em
+    border-bottom: 2px solid $border-color
