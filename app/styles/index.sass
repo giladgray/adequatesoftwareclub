@@ -1,4 +1,10 @@
+@import '../bower_components/bourbon/dist/_bourbon.scss'
+
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700)
+
+$border-color: black
+$border-width: 0.1em
+$std-border: $border-width solid $border-color
 
 body
   max-width: 960px
@@ -9,7 +15,6 @@ body
   margin: 2em auto
 
 header
-  $border-color: gray
 
   display: inline-block
 
@@ -28,9 +33,64 @@ header
   .adequate
     margin-top: 0.1em
     padding-top: 0.05em
-    border-top: 2px solid $border-color
+    border-top: $std-border
 
   .software
     margin-bottom: 0.1em
     padding-bottom: 0.1em
-    border-bottom: 2px solid $border-color
+    border-bottom: $std-border
+
+.tagline
+  margin: 1em auto 2em
+  font-size: 2em
+
+  .good
+    font-weight: bold
+
+.projects
+
+  header
+    display: block
+    text-transform: uppercase
+    font-weight: bold
+    margin-bottom: 0.2em
+
+  ul
+    @include clearfix
+    margin: 0
+    padding: 0
+    border: $std-border
+    list-style-type: none
+
+    font-size: 4em
+
+    .project
+      @include size(50% 4em)
+      @include box-sizing(border-box)
+      @include transition(all .3s ease)
+      float: left
+      border: $std-border
+
+      line-height: 1
+      font-weight: bold
+      padding: 1.2em 0
+
+      .hook
+        display: block
+        font-size: 0.3em
+
+      &:hover
+        background: $border-color
+        color: white
+
+footer
+  margin: 2em auto
+  span, a
+    font-weight: bold
+
+  a
+    text-decoration: none
+    color: gray
+
+    &:hover
+      text-decoration: underline
