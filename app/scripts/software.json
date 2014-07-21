@@ -1,0 +1,9 @@
+[
+  "ilangray/tv",
+  "giladgray/regexjs",
+  "ilangray/Thunderscore",
+  {
+    "name": "switchtab",
+    "repo": "giladgray/chrome-switchtab"
+  }
+]

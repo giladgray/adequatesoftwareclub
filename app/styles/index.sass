@@ -14,6 +14,13 @@ body
   font-family: 'Roboto Slab', Georgia, serif
   margin: 2em auto
 
+a
+  text-decoration: none
+  color: inherit
+
+  &:hover
+    text-decoration: underline
+
 header
 
   display: inline-block
@@ -64,24 +71,34 @@ header
 
     font-size: 4em
 
-    .project
+    .project, &:empty:before
+      position: relative
       @include size(50% 4em)
       @include box-sizing(border-box)
       @include transition(all .3s ease)
       float: left
       border: $std-border
 
-      line-height: 1
+      line-height: 1.1
       font-weight: bold
       padding: 1.2em 0
 
       .hook
-        display: block
+        font-size: 0.3em
+
+      .language
+        position: absolute
+        bottom: 0.3em
+        right: 0.3em
         font-size: 0.3em
 
       &:hover
         background: $border-color
         color: white
+
+    &:empty:before
+      content: 'Loading...'
+      width: 100%
 
 footer
   margin: 2em auto
@@ -89,8 +106,4 @@ footer
     font-weight: bold
 
   a
-    text-decoration: none
     color: gray
-
-    &:hover
-      text-decoration: underline
