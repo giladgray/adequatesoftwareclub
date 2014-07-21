@@ -53,7 +53,7 @@ module.exports = (grunt, options) ->
       livereload:
         options:
           livereload: '<%= connect.options.livereload %>'
-        files: ['dist/**/*.{js,css,html,json,png}']
+        files: ['{app,dist}/**/*.{js,css,html,json,png}']
 
     clean:
       dist: ['dist']
@@ -67,12 +67,10 @@ module.exports = (grunt, options) ->
           bundleOptions:
             debug: true # coffee sourcemaps!!!
         files:
-          'dist/scripts/index.js'        : ['app/scripts/index.coffee']
-          'dist/scripts/backbone.svg.js' : ['app/scripts/backbone.svg.coffee']
+          'dist/scripts/index.js' : ['app/scripts/index.coffee']
       dist:
         files:
-          'dist/scripts/index.js'        : ['app/scripts/index.coffee']
-          'dist/scripts/backbone.svg.js' : ['app/scripts/backbone.svg.coffee']
+          'dist/scripts/index.js' : ['app/scripts/index.coffee']
 
     # grunt-contrib-sass
     sass:
@@ -86,7 +84,7 @@ module.exports = (grunt, options) ->
     handlebars:
       dist:
         files:
-          'dist/scripts/templates.js': ['app/handlebars/**/*.hbs']
+          'dist/scripts/templates.js': ['app/templates/**/*.hbs']
         options:
           namespace: 'Templates'
           processName: (filename) ->
