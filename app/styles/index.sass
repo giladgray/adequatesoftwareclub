@@ -71,7 +71,7 @@ header
 
     font-size: 4em
 
-    .project, &:empty:before
+    .project > a, &:empty:before
       position: relative
       @include size(50% 4em)
       @include box-sizing(border-box)
@@ -93,6 +93,7 @@ header
         font-size: 0.3em
 
       &:hover
+        text-decoration: none
         background: $border-color
         color: white
 
