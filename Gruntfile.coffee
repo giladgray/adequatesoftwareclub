@@ -42,7 +42,7 @@ module.exports = (grunt, options) ->
     # grunt-contrib-watch
     watch:
       browserify:
-        files: ['app/scripts/**/*.coffee']
+        files: ['app/scripts/**/*.{coffee,json}']
         tasks: ['browserify:dev']
       handlebars:
         files: ['app/templates/**/*.hbs']

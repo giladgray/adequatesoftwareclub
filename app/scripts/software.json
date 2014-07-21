@@ -1,5 +1,10 @@
 [
+  {
+    "name": "backstrap",
+    "repo": "giladgray/generator-backstrap"
+  },
   "ilangray/tv",
+  "giladgray/grunt-intro",
   "giladgray/regexjs",
   "ilangray/Thunderscore",
   {
