@@ -11,7 +11,7 @@ $golden3: golden-ratio(1em, 3)
 $border-color: black
 $border-width: golden-ratio(1em, -4)
 $std-border: $border-width solid black
-
+$project-height: golden-ratio(em(50%, 14), 0)
 
 body
   max-width: $desktop
@@ -39,6 +39,9 @@ a
     text-decoration: none
     background: $border-color
     color: white
+
+strong
+  display: inline-block
 
 header
   display: inline-block
@@ -90,8 +93,6 @@ header
       margin: 0 1em
 
     .project > a, &:empty:before
-      $project-height: golden-ratio(em(50%, 14), 0)
-
       position: relative
       @include size(50% $project-height)
       @include box-sizing(border-box)
@@ -108,8 +109,6 @@ header
       @media (max-width: $mobile)
         width: 100%
 
-      .title
-
       .hook
         font-size: golden-ratio(1em, -2)
 
@@ -122,6 +121,7 @@ header
     &:empty:before
       content: 'Loading...'
       width: 100%
+      padding: ($project-height / 2 - .7em) 0
 
 footer
   margin: 2em auto
