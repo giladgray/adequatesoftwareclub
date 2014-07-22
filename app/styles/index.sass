@@ -6,9 +6,12 @@ $desktop: 960px
 $tablet: 768px
 $mobile: 600px
 
+$golden3: golden-ratio(1em, 3)
+
 $border-color: black
-$border-width: 0.1em
-$std-border: $border-width solid $border-color
+$border-width: golden-ratio(1em, -4)
+$std-border: $border-width solid black
+
 
 body
   max-width: $desktop
@@ -16,7 +19,7 @@ body
   text-align: center
 
   font-family: 'Roboto Slab', Georgia, serif
-  margin: 2em auto
+  margin: golden-ratio(1em, 2) auto
 
   @media (max-width: $desktop)
     font-size: 12px
@@ -38,19 +41,16 @@ a
     color: white
 
 header
-
   display: inline-block
-
   text-align: center
-  font-size: 3em
   line-height: 1
 
   .the, .club
-    font-size: 1em
+    font-size: golden-ratio(1em, 2)
     font-style: italic
 
   .adequate, .software
-    font-size: 2em
+    font-size: golden-ratio(1em, 4)
     text-transform: uppercase
 
   .adequate
@@ -64,8 +64,8 @@ header
     border-bottom: $std-border
 
 .tagline
-  margin: 2em auto 2em
-  font-size: 2em
+  margin: golden-ratio(1em, 2) auto golden-ratio(1em, 2)
+  font-size: golden-ratio(1em, 2)
 
   .good
     font-weight: bold
@@ -73,6 +73,7 @@ header
 .projects
 
   header
+    font-size: $golden3
     display: block
     text-transform: uppercase
     font-weight: bold
@@ -82,38 +83,41 @@ header
     @include clearfix
     margin: 0
     padding: 0
-    border: $std-border
+    border: golden-ratio(1em, -1) solid black
     list-style-type: none
-
-    font-size: 4em
 
     @media (max-width: $mobile)
       margin: 0 1em
 
     .project > a, &:empty:before
+      $project-height: golden-ratio(em(50%, 14), 0)
+
       position: relative
-      @include size(50% 4em)
+      @include size(50% $project-height)
       @include box-sizing(border-box)
       @include transition(all .3s ease)
       float: left
       border: $std-border
 
       line-height: 1.1
+      font-size: $golden3
       font-weight: bold
-      padding: 1.2em 0
+      padding: ($project-height / 2 - 1em) 0
       margin: 0
 
       @media (max-width: $mobile)
         width: 100%
 
+      .title
+
       .hook
-        font-size: 0.3em
+        font-size: golden-ratio(1em, -2)
 
       .language
         position: absolute
         bottom: 0.3em
         right: 0.3em
-        font-size: 0.3em
+        font-size: golden-ratio(1em, -3)
 
     &:empty:before
       content: 'Loading...'
