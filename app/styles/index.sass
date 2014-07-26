@@ -2,16 +2,19 @@
 
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700)
 
+@function grem($steps: 0)
+  @return golden-ratio(1em, $steps)
+
 $desktop: 960px
 $tablet: 768px
 $mobile: 600px
 
-$golden3: golden-ratio(1em, 3)
+$golden3: grem(3)
 
 $border-color: black
-$border-width: golden-ratio(1em, -4)
+$border-width: grem(-4)
 $std-border: $border-width solid black
-$project-height: golden-ratio(1em, 3)
+$project-height: grem(3)
 
 body
   max-width: $desktop
@@ -19,7 +22,7 @@ body
   text-align: center
 
   font-family: 'Roboto Slab', Georgia, serif
-  margin: golden-ratio(1em, 2) auto
+  margin: grem(2) auto
 
   @media (max-width: $desktop)
     font-size: 12px
@@ -49,11 +52,11 @@ header
   line-height: 1
 
   .the, .club
-    font-size: golden-ratio(1em, 2)
+    font-size: grem(2)
     font-style: italic
 
   .adequate, .software
-    font-size: golden-ratio(1em, 4)
+    font-size: grem(4)
     text-transform: uppercase
 
   .adequate
@@ -67,8 +70,8 @@ header
     border-bottom: $std-border
 
 .tagline
-  margin: golden-ratio(1em, 2) auto golden-ratio(1em, 2)
-  font-size: golden-ratio(1em, 2)
+  margin: grem(2) auto grem(2)
+  font-size: grem(2)
 
   .good
     font-weight: bold
@@ -86,7 +89,7 @@ header
     @include clearfix
     margin: 0
     padding: 0
-    border: golden-ratio(1em, -1) solid black
+    border: grem(-1) solid black
     list-style-type: none
 
     @media (max-width: $mobile)
@@ -111,14 +114,14 @@ header
 
       .hook
         padding: 0.5em 4em
-        font-size: golden-ratio(1em, -2)
+        font-size: grem(-2)
 
         @media (max-width: $mobile)
           padding-left: 1em
           padding-right: 1em
 
       .stats
-        font-size: golden-ratio(1em, -3)
+        font-size: grem(-3)
 
         .language
           margin-right: 2em
