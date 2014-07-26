@@ -173,9 +173,7 @@ module.exports = (grunt, options) ->
   grunt.registerTask 'minify', [
     'imagemin'
     'useminPrepare'
-    'concat'
     'uglify'
-    'cssmin'
     'usemin'
   ]
 
