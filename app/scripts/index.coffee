@@ -4,6 +4,9 @@ languages = require './languages.json'
 
 Handlebars.registerHelper 'or', (a, b) -> a or b
 
+Handlebars.registerHelper 'lastUpdate', (time) ->
+  return "Updated on #{moment(time).format('ll')}"
+
 # return
 $list = $('.projects ul')
 _.each software, (repo) ->

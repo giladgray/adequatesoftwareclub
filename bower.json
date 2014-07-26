@@ -19,6 +19,7 @@
     "jquery": "~2.1.1",
     "lodash": "~2.4.1",
     "prismjs": "*",
-    "bourbon": "~4.0.2"
+    "bourbon": "~4.0.2",
+    "moment": "~2.7.0"
   }
 }
