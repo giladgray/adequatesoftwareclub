@@ -44,8 +44,7 @@ a
 
   &:hover
     text-decoration: none
-    background: $border-color
-    color: white
+    @include invert()
 
 strong
   display: inline-block
@@ -82,7 +81,7 @@ header
 
 .projects
 
-  header
+  .projects-header
     font-size: $golden3
     display: block
     text-transform: uppercase
@@ -135,12 +134,20 @@ header
       padding: ($project-height / 2 - .7em) 0
 
 footer
-  margin: 2em auto
+  position: absolute
+  left: 0
+  right: 0
+
+  @include invert()
+  padding: grem(1)
+
   span, a
     font-weight: bold
 
   a
-    color: gray
+    color: lightgray
+    &:hover
+      @include invert(black)
 
 .headhesive
   // floating at the top of the page
