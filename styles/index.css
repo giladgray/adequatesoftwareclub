@@ -1,25 +1,33 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
-body { max-width: 960px; margin: auto; text-align: center; font-family: "Roboto Slab", Georgia, serif; margin: 2em auto; }
+body { max-width: 960px; margin: auto; text-align: center; font-family: "Roboto Slab", Georgia, serif; margin: 2.61792em auto; }
+@media (max-width: 960px) { body { font-size: 12px; max-width: 768px; } }
+@media (max-width: 768px) { body { font-size: 10px; } }
 
 a { text-decoration: none; color: inherit; -webkit-transition: background 0.3s ease, color 0.3s ease; -moz-transition: background 0.3s ease, color 0.3s ease; transition: background 0.3s ease, color 0.3s ease; padding: 2px 3px; margin: -2px -3px; }
 a:hover { text-decoration: none; background: black; color: white; }
 
-header { display: inline-block; text-align: center; font-size: 3em; line-height: 1; }
-header .the, header .club { font-size: 1em; font-style: italic; }
-header .adequate, header .software { font-size: 2em; text-transform: uppercase; }
-header .adequate { margin-top: 0.1em; padding-top: 0.05em; border-top: 0.1em solid black; }
-header .software { margin-bottom: 0.1em; padding-bottom: 0.1em; border-bottom: 0.1em solid black; }
+strong { display: inline-block; }
 
-.tagline { margin: 2em auto 2em; font-size: 2em; }
+header { display: inline-block; text-align: center; line-height: 1; }
+header .the, header .club { font-size: 2.61792em; font-style: italic; }
+header .adequate, header .software { font-size: 6.85353em; text-transform: uppercase; }
+header .adequate { margin-top: 0.1em; padding-top: 0.05em; border-top: 0.14591em solid black; }
+header .software { margin-bottom: 0.1em; padding-bottom: 0.1em; border-bottom: 0.14591em solid black; }
+
+.tagline { margin: 2.61792em auto 2.61792em; font-size: 2.61792em; }
 .tagline .good { font-weight: bold; }
 
-.projects header { display: block; text-transform: uppercase; font-weight: bold; margin-bottom: 0.2em; }
-.projects ul { margin: 0; padding: 0; border: 0.1em solid black; list-style-type: none; font-size: 4em; }
+.projects header { font-size: 4.2358em; display: block; text-transform: uppercase; font-weight: bold; margin-bottom: 0.2em; }
+.projects ul { margin: 0; padding: 0; border: 0.61805em solid black; list-style-type: none; }
 .projects ul:after { content: ""; display: table; clear: both; }
-.projects ul .project > a, .projects ul:empty:before { position: relative; height: 4em; width: 50%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; transition: all 0.3s ease; float: left; border: 0.1em solid black; line-height: 1.1; font-weight: bold; padding: 1.2em 0; margin: 0; }
-.projects ul .project > a .hook, .projects ul:empty:before .hook { font-size: 0.3em; }
-.projects ul .project > a .language, .projects ul:empty:before .language { position: absolute; bottom: 0.3em; right: 0.3em; font-size: 0.3em; }
-.projects ul:empty:before { content: "Loading..."; width: 100%; }
+@media (max-width: 600px) { .projects ul { margin: 0 1em; } }
+.projects ul .project > a, .projects ul:empty:before { position: relative; height: 4.2358em; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; transition: all 0.3s ease; float: left; border: 0.14591em solid black; line-height: 1.1; font-size: 4.2358em; font-weight: bold; padding: 1.05895em 0; margin: 0; }
+@media (max-width: 600px) { .projects ul .project > a, .projects ul:empty:before { width: 100%; } }
+.projects ul .project > a .hook, .projects ul:empty:before .hook { padding: 0.5em 4em; font-size: 0.38198em; }
+@media (max-width: 600px) { .projects ul .project > a .hook, .projects ul:empty:before .hook { padding-left: 1em; padding-right: 1em; } }
+.projects ul .project > a .stats, .projects ul:empty:before .stats { font-size: 0.23608em; }
+.projects ul .project > a .stats .language, .projects ul:empty:before .stats .language { margin-right: 2em; }
+.projects ul:empty:before { content: "Loading..."; padding: 1.4179em 0; }
 
 footer { margin: 2em auto; }
 footer span, footer a { font-weight: bold; }

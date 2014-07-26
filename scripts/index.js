@@ -9,6 +9,10 @@ Handlebars.registerHelper('or', function(a, b) {
   return a || b;
 });
 
+Handlebars.registerHelper('lastUpdate', function(time) {
+  return "Updated on " + (moment(time).format('ll'));
+});
+
 $list = $('.projects ul');
 
 _.each(software, function(repo) {

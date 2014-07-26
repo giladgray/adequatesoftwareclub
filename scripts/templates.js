@@ -16,10 +16,12 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (helper = helpers.description) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.description); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</div>\n    <div class=\"language\">";
+    + "</div>\n    <div class=\"stats\">\n      <span class=\"language\">";
   if (helper = helpers.language) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.language); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</div>\n  </a>\n</li>\n";
+    + "</span>\n      <span class=\"updated\">"
+    + escapeExpression((helper = helpers.lastUpdate || (depth0 && depth0.lastUpdate),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.pushed_at), options) : helperMissing.call(depth0, "lastUpdate", (depth0 && depth0.pushed_at), options)))
+    + "</span>\n    </div>\n  </a>\n</li>\n";
   return buffer;
   });
