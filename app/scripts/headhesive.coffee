@@ -21,8 +21,8 @@ class Headhesive
     if _.isNumber @options.offset
       @scrollOffset = @options.offset
     else if _.isString @options.offset
-      offset = $(@options.offset).offset()
-      @scrollOffset = offset.top + offset.height
+      $offset = $(@options.offset)
+      @scrollOffset = $offset.offset().top + $offset.height()
     else
       throw new Error("Invalid offset: " + @options.offset)
 
