@@ -1,3 +1,5 @@
+Headhesive = require './headhesive.coffee'
+
 # TODO: generate software.json from repo names in Grunt task instead of via jQuery
 software = require './software.json'
 languages = require './languages.json'
