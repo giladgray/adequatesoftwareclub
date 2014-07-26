@@ -53,10 +53,10 @@ header
   display: inline-block
   text-align: center
   line-height: 1
+  padding-top: grem(1)
 
   .the, .club
     font-size: grem(2)
-    font-style: italic
 
   .adequate, .software
     font-size: grem(4)
@@ -92,19 +92,19 @@ header
     @include clearfix
     margin: 0
     padding: 0
-    border: grem(-1) solid black
     list-style-type: none
 
     @media (max-width: $mobile)
       margin: 0 1em
 
     .project > a, &:empty:before
-      position: relative
-      @include size(100% $project-height)
+      display: block
+      height: $project-height
       @include box-sizing(border-box)
       @include transition(all .3s ease)
-      float: left
+
       border: $std-border
+      border-bottom: none
 
       line-height: 1.1
       font-size: $golden3
@@ -132,6 +132,9 @@ header
     &:empty:before
       content: 'Loading...'
       padding: ($project-height / 2 - .7em) 0
+
+    .project:last-child > a
+      border-bottom: $std-border
 
 footer
   position: absolute
