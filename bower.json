@@ -1,8 +1,8 @@
 {
-  "name": "backbone.svg",
-  "version": "0.0.0",
+  "name": "adequatesoftwareclub",
+  "version": "1.0.0",
   "authors": [
-    "Gilad Gray <ggray@palantir.com>"
+    "Gilad Gray <giladgray@gmail.com>"
   ],
   "license": "MIT",
   "private": true,

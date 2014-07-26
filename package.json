@@ -1,8 +1,7 @@
 {
-  "name": "backbone.svg",
-  "version": "0.0.0",
-  "description": "create SVG Views",
-  "main": "dist/backbone.svg.js",
+  "name": "adequatesoftwareclub",
+  "version": "1.0.0",
+  "description": "when pretty good is good enough",
   "devDependencies": {
     "coffeeify": "^0.6.0",
     "grunt": "~0.4.4",
@@ -28,5 +27,5 @@
     "test": "grunt test"
   },
   "author": "Gilad Gray",
-  "license": "BSD-2-Clause"
+  "license": "MIT"
 }
