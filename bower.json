@@ -20,6 +20,7 @@
     "lodash": "~2.4.1",
     "prismjs": "*",
     "bourbon": "~4.0.2",
-    "moment": "~2.7.0"
+    "moment": "~2.7.0",
+    "headhesive.js": "~1.1.1"
   }
 }

@@ -5,6 +5,10 @@
 @function grem($steps: 0)
   @return golden-ratio(1em, $steps)
 
+@mixin invert($color: white)
+  color: $color
+  background: invert($color)
+
 $desktop: 960px
 $tablet: 768px
 $mobile: 600px
@@ -137,3 +141,34 @@ footer
 
   a
     color: gray
+
+.headhesive
+  // floating at the top of the page
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 1
+
+  // nice little slide transition when it appears
+  @include transform(translateY(-100%))
+  @include transition(all .3s ease)
+  &.headhesive--stick
+    @include transform(translateY(0%))
+
+  @include invert()
+  padding: 1em
+
+  .the, .club
+    display: inline
+    margin: 0 0.2em
+    font-size: grem(1)
+
+  .adequate, .software
+    display: inline
+    font-size: grem(2)
+    font-weight: bold
+    border: none
+
+  .adequate
+    margin-right: 0.2em
